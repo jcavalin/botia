@@ -26,7 +26,7 @@ class PlayerHelper {
         const player = createAudioPlayer();
         player.play(resource);
         player.on(AudioPlayerStatus.Idle, () => {
-            console.log(`Done!`);
+            console.log(`Audio done!`);
             connection.destroy()
         });
 
