@@ -1,1 +1,5 @@
 # botia
+
+```
+npm run inspect
+```
