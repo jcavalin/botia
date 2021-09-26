@@ -64,7 +64,7 @@ class Command {
     }
 
     playQueridoMeuAmor(msg) {
-        const stream = ytdl(QUERIDO_MEU_AMOR, { filter: 'audioonly' });
+        const stream = ytdl(QUERIDO_MEU_AMOR, { filter: 'audioonly', highWaterMark: 1<<25 });
         const player = new PlayerHelper();
         player.playOnChannel(msg, stream, QUERIDO_MEU_AMOR);
     }
