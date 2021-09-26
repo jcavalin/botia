@@ -62,7 +62,7 @@ class Command {
 
     playRapariga(msg) {
         const player = new PlayerHelper();
-        const path = resolve('./assets/rapariga.mp3');
+        const path = resolve('./assets/raparigar.mp3');
         player.playOnChannel(msg, path, "✌️");
     }
 }
