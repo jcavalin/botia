@@ -34,7 +34,7 @@ class PlayerHelper {
             console.log(`Audio done!`);
             connection.destroy()
         }).on('error', error => {
-            console.error(`Error: ${error.message} with resource ${error.resource.metadata.title}`);
+            console.error(`Error while playing: ${error.message}`);
         });
 
         player.play(resource);
