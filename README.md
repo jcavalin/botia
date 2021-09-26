@@ -4,16 +4,20 @@
 
 It's a discord bot made for fun and a tribute for someone that I really care.
 
-### How to run?*
+---
+
+### How to run?
 ```
 npm start
 ```
-> You have to create a .env file with .env.example template or create the envs values yourself.
 
-### And in dev mode?*
+### And in dev mode?
 ```
 npm inspect
 ```
+> You have to create a .env file with .env.example template or create the envs values yourself.
+
+---
 
 ### How about the commands?
 ```
