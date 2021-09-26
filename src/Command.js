@@ -22,6 +22,8 @@ class Command {
                 return;
             }
 
+            console.log(`Command received ${msg}...`)
+
             const command = msg.content.slice(PREFIX.length).trim().toLowerCase();
 
             switch (command) {

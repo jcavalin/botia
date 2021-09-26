@@ -33,6 +33,7 @@ class Bot {
     }
 
     login() {
+        console.log(`Loging in ${process.env.TOKEN}...`)
         this.client.login(process.env.TOKEN);
     }
 }
