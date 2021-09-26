@@ -2,7 +2,8 @@ import {
     joinVoiceChannel,
     createAudioPlayer,
     createAudioResource,
-    AudioPlayerStatus
+    AudioPlayerStatus,
+    NoSubscriberBehavior
 } from '@discordjs/voice';
 
 class PlayerHelper {
@@ -23,15 +24,24 @@ class PlayerHelper {
 
         const resource = createAudioResource(audio);
 
-        const player = createAudioPlayer();
-        player.play(resource);
+        const player = createAudioPlayer({
+            behaviors: {
+                noSubscriber: NoSubscriberBehavior.Pause,
+            },
+        });
+        
         player.on(AudioPlayerStatus.Idle, () => {
             console.log(`Audio done!`);
             connection.destroy()
+        }).on('error', error => {
+            console.error(`Error: ${error.message} with resource ${error.resource.metadata.title}`);
         });
 
+        player.play(resource);
+
         const subscription = connection.subscribe(player);
-        console.log(`Playing...`);
+
+        console.log('Playing...');
 
         if (reply) {
             msg.reply(reply);

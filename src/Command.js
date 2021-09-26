@@ -37,12 +37,15 @@ class Command {
                     break;
                 case COMMAND_DESCULPA :
                     this.showDesculpa(msg);
+                default :
+                    this.showQue(msg)
+                    break;
             }
         });
     }
 
-    showHelp(msg) {
-        let reply = '```';
+    showHelp(msg, reply = '') {
+        reply += '```';
         reply += 'Commands: \n';
         reply += '\t - ' + PREFIX + ' ' + COMMAND_RAPARIGAR + '\n';
         reply += '\t - ' + PREFIX + ' ' + COMMAND_QUERIDO_MEU_AMOR + '\n';
@@ -50,6 +53,10 @@ class Command {
         reply +=  '```';
 
         msg.reply(reply);
+    }
+
+    showQue(msg) {
+        this.showHelp(msg, 'Que?\n');
     }
 
     showDesculpa(msg) {
