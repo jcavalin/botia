@@ -41,10 +41,6 @@ class Command {
         });
     }
 
-    showDesculpa(msg) {
-        msg.reply('ARROMBADO!');
-    }
-
     showHelp(msg) {
         let reply = '```';
         reply += 'Commands: \n';
@@ -54,6 +50,10 @@ class Command {
         reply +=  '```';
 
         msg.reply(reply);
+    }
+
+    showDesculpa(msg) {
+        msg.reply('ARROMBADO!');
     }
 
     playQueridoMeuAmor(msg) {
