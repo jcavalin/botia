@@ -36,7 +36,7 @@ class Command {
                     this.playRapariga(msg);
                     break;
                 case COMMAND_DESCULPA :
-                    this.showDesculpa();
+                    this.showDesculpa(msg);
             }
         });
     }
