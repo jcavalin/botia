@@ -13,6 +13,8 @@ class PlayerHelper {
             return msg.reply("Você não está em um canal de voz, arrombado!");
         }
 
+        console.log(`Connecting to channel ${channel.id}...`);
+
         const connection = joinVoiceChannel({
             channelId: channel.id,
             guildId: channel.guild.id,
@@ -26,6 +28,7 @@ class PlayerHelper {
         player.on(AudioPlayerStatus.Idle, () => connection.destroy());
 
         const subscription = connection.subscribe(player);
+        console.log(`Playing...`);
 
         if (reply) {
             msg.reply(reply);
