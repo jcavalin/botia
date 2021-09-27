@@ -15,7 +15,7 @@ npm start
 ```
 npm inspect
 ```
-> You have to create a .env file with .env.example template or create the envs values yourself.
+> You have to create a .env file with .env.example template or create the env values yourself.
 
 ---
 
