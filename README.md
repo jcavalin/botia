@@ -2,7 +2,7 @@
 
 ![BOTia](https://raw.githubusercontent.com/jcavalin/botia/main/assets/avatar.png)
 
-It's a discord bot made for fun and a tribute for someone that I really care.
+It's a discord bot made for fun and a tribute for a friend.
 
 ---
 
