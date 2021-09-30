@@ -37,6 +37,7 @@ class Command {
                     break;
                 case COMMAND_DESCULPA :
                     this.showDesculpa(msg);
+                    break;
                 default :
                     this.showQue(msg)
                     break;
